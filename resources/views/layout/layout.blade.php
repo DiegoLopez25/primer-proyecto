@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('vendor/quill/quill.bubble.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/remixicon/remixicon.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/simple-datatables/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/sweetalert2/sweetalert2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <title>System - POS</title>
 </head>
@@ -109,6 +110,8 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a>
     
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/inputmask/jquery.inputmask.min.js') }}"></script>
+    <script src="{{ asset('vendor/sweetalert2/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('vendor/apexcharts/apexcharts.min.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('vendor/chart.js/chart.umd.js') }}"></script>
