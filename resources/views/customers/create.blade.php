@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <form action="/store" method="post" id='frmCustomer'>
-                    
+                    @csrf
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Create Customer</h5>
@@ -80,18 +80,32 @@
        $(document).on('submit',function(e) {
             e.preventDefault();
             let data = $('#frmCustomer').serialize();
-            console.log(JSON.stringify(data));
-            /*/
+            
             $.ajax({
-                data: datos,
-                url: 'customers/store',
+                data: data,
+                url: 'store',
                 type: 'post',
                 dataType: 'json',
-                success: function (response){
-                    // Código de éxito
-                        Swal
+                success: function (res){
+                    Swal.fire({
+                        icon: "success",
+                        title: res.title,
+                        text:res.msg,
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
+                    $('#frmCustomer')[0].reset();
+                },
+                error: function(error){
+                    Swal.fire({
+                        title:'Error!',
+                        text:error.message,
+                        icon:'error',
+                        showConfirmButton:false,
+                        timer: 2000
+                    });
                 }
-            });*/
+            });
        });
     </script>
 @endpush

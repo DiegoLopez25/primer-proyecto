@@ -10,5 +10,6 @@ Route::get('/customers',[CustomerController::class,'index']);
 Route::get('/customers/create',[CustomerController::class,'create']);
 Route::get('/customers/edit',[CustomerController::class,'edit']);
 Route::get('/customers/show/{id}',[CustomerController::class,'show']);
+Route::post('/customers/store',[CustomerController::class,'store']);
 
 
